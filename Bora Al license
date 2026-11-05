@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none';" />
+<title>Bora AI — Gizlilik Politikası</title>
+<style>
+  :root { color-scheme: light dark; --bg:#fff; --fg:#1b1e29; --dim:#5b6075; --accent:#2f5fd6; --card:#f4f6fb; --line:#dde1ee; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#10121a; --fg:#eef0f7; --dim:#9aa0b5; --accent:#7aa2ff; --card:#181b26; --line:#2a2e3d; } }
+  body { margin:0; padding:20px 18px 40px; background:var(--bg); color:var(--fg); font:15px/1.65 system-ui,-apple-system,Segoe UI,Roboto,sans-serif; max-width:760px; margin-inline:auto; }
+  h1 { font-size:22px; margin:0 0 4px; }
+  h2 { font-size:16.5px; margin:28px 0 8px; color:var(--accent); }
+  p, li { margin:0 0 10px; }
+  ul { padding-left:20px; margin:0 0 10px; }
+  .meta { color:var(--dim); font-size:13px; margin-bottom:18px; }
+  .box { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:12px 14px; margin:14px 0; }
+  table { width:100%; border-collapse:collapse; font-size:13.5px; }
+  th, td { text-align:left; padding:8px; border-bottom:1px solid var(--line); vertical-align:top; }
+  th { color:var(--dim); font-weight:600; }
+</style>
+</head>
+<body>
+<h1>Bora AI — Gizlilik Politikası</h1>
+<div class="meta">Son güncelleme: 5 Kasım 2026 · Geliştirici: BoraCoreStudios · İletişim: <strong>Boracan912@gmail.com</strong></div>
+
+<div class="box"><strong>Kısaca:</strong> Bora AI’ın kendi sunucusu yoktur ve hesap açmanızı istemez. Sohbetleriniz ve API anahtarınız yalnızca cihazınızda, şifreli olarak saklanır. Mesajlarınız, kendi Google Gemini API anahtarınızla doğrudan Google’a gönderilir. Kendi Groq API anahtarınızı girip ilgili özellikleri seçerseniz (internette arama, Groq ses tanıma, GPT-OSS 120B sohbet modeli), bu özelliklerin verisi doğrudan Groq’a gönderilir; görsel ve PDF hiçbir durumda Groq’a gönderilmez. Reklam, analiz ya da izleme aracı kullanmayız.</div>
+
+<h2>1. Kapsam</h2>
+<p>Bu politika, BoraCoreStudios tarafından geliştirilen Bora AI yapay zeka sohbet uygulaması için geçerlidir. Uygulama 18 yaş ve üzeri kullanıcılar içindir.</p>
+
+<h2>2. Hangi veriler işlenir?</h2>
+<table>
+<tr><th>Veri</th><th>Ne için</th><th>Nerede</th></tr>
+<tr><td>Yazdığınız mesajlar</td><td>Yapay zeka yanıtı üretmek; yanıt metni, sesli okuma için de Google Gemini ses modeline gönderilir</td><td>Cihazınızda (şifreli) ve yanıt için Google Gemini API’ye iletilir</td></tr>
+<tr><td>Eklediğiniz görsel, PDF ve metin/kod dosyaları</td><td>Analiz edilmek üzere yapay zekaya iletilir</td><td>Google Gemini API’ye iletilir. Görseller sohbet geçmişinde cihazınızda saklanır; PDF’in kendisi saklanmaz</td></tr>
+<tr><td>Ses kaydı (mikrofon)</td><td>Konuşmayı yazıya çevirmek</td><td>Kayıt cihazda geçici olarak işlenir ve yazıya dökülmesi için varsayılan olarak Google Gemini API’ye iletilir; Ayarlar’dan “Groq Whisper”ı açarsanız Groq’a iletilir. Bora AI kaydı saklamaz</td></tr>
+<tr><td>Hava durumu için şehir adı</td><td>Hava durumunu göstermek</td><td>Open-Meteo hizmetine gönderilir (open-meteo.com); Bora AI saklamaz, yalnızca son şehir cihazda kalır</td></tr>
+<tr><td>Arama sorusu (yalnızca internette arama kullanıldığında)</td><td>Güncel bilgiyi internette aratmak</td><td>Yazdığınız metin (kısa takip sorularında bir önceki sorunuzun kısa bir bölümü) Groq API’ye iletilir. Görsel, PDF, dosya ve ses gönderilmez. Groq’un bulduğu özet, yanıtı yazması için Google Gemini’ye de iletilir</td></tr>
+      <tr><td>Sohbet içeriği (yalnızca GPT-OSS 120B modelini seçerseniz)</td><td>Yanıtı Gemini yerine Groq’un modeliyle üretmek</td><td>Mesajlarınız, önceki konuşma bağlamı, özel talimatınız ve mesaja eklediğiniz metin/kod dosyalarının içeriği Groq API’ye iletilir. Görsel ve PDF desteklenmez ve gönderilmez. Model kendiliğinden seçilmez</td></tr>
+      <tr><td>Gemini API anahtarınız</td><td>Google ile kimlik doğrulama</td><td>Yalnızca cihazınızda, şifreli</td></tr>
+      <tr><td>Groq anahtarınız (isteğe bağlı)</td><td>Groq ile kimlik doğrulama</td><td>Yalnızca cihazınızda, şifreli; istediğiniz zaman silebilirsiniz</td></tr>
+<tr><td>Groq kullanım sayacı (günlük istek sayıları)</td><td>Ayarlar’da bugün kaç Groq isteği yapıldığını göstermek</td><td>Yalnızca cihazınızda; içerik değil yalnızca sayılar tutulur</td></tr>
+      <tr><td>Ayarlar, özel talimat, seçtiğiniz model</td><td>Uygulamayı tercihlerinize göre çalıştırmak</td><td>Yalnızca cihazınızda</td></tr>
+<tr><td>PIN (isteğe bağlı)</td><td>Uygulama kilidi ve şifreleme anahtarı türetmek</td><td>PIN’in kendisi saklanmaz; yalnızca şifreli bir doğrulama değeri tutulur</td></tr>
+</table>
+<p>BoraCoreStudios bu verilere erişmez, onları toplamaz, satmaz ve üçüncü kişilerle paylaşmaz. Konum, kişi listesi, kimlik veya reklam kimliği gibi veriler talep edilmez.</p>
+
+<h2>3. Üçüncü taraf: Google Gemini API</h2>
+<p>Yanıt üretmek için mesajlarınız ve ekleriniz (GPT-OSS 120B modelini seçmediğiniz sürece), sizin sağladığınız API anahtarıyla doğrudan Google’ın Gemini API’sine gönderilir. Bu aktarımdan sonra veriler Google’ın politikalarına tabidir; hangi verilerin nasıl işleneceğini Google belirler.</p>
+<ul>
+<li><strong>Ücretsiz katman:</strong> Google’ın ücretsiz API katmanında gönderilen içerikler Google’ın ürün ve hizmetlerini geliştirmek için kullanılabilir ve insan incelemecilerce okunabilir. Bu nedenle kişisel, gizli veya hassas bilgileri yazmamanızı öneririz.</li>
+<li><strong>Ücretli katman:</strong> Google’ın koşullarına göre içerikler bu amaçla kullanılmaz. Ayrıntılar için Google’ın kendi belgelerine bakın.</li>
+<li>Google’ın koşulları bazı bölgelerde (ör. Avrupa Ekonomik Alanı, Birleşik Krallık, İsviçre) ücretsiz katman kullanımını kısıtlayabilir. Kendi bölgeniz için geçerli koşulları kontrol etmek sizin sorumluluğunuzdadır.</li>
+</ul>
+<p>Google Gemini API Koşulları ve Google Gizlilik Politikası: <strong>ai.google.dev/gemini-api/terms</strong> ve <strong>policies.google.com/privacy</strong></p>
+
+<p><strong>Open-Meteo:</strong> “hava durumu” komutunda yalnızca şehir adı ve koordinatlar bu hizmete gönderilir. Saat, tarih, zamanlayıcı ve WhatsApp komutları cihazda çalışır; WhatsApp mesajını siz gönderirsiniz.</p>
+
+<h2>4. Üçüncü taraf (isteğe bağlı): Groq API</h2>
+  <p>Groq ile ilgili her şey <strong>varsayılan olarak kapalıdır</strong> ve yalnızca siz kendi Groq API anahtarınızı girip ilgili özelliği seçerseniz çalışır. Anahtar girmezseniz Groq’a hiçbir veri gönderilmez. Dört durum vardır:</p>
+  <ul>
+    <li><strong>İnternette arama</strong> (mesaj kutusundaki 🌐 düğmesi ya da “Her mesajda otomatik ara” açıkken): yalnızca yazdığınız soru metni (kısa bir takip sorusuysa bir önceki sorunuzun ilk birkaç yüz karakteri) Groq’a iletilir. Groq’un arama sistemi sorunuzu yanıtlamak için internette arama yapabilir. Bulunan bilgilerin özeti cihazınıza döner ve nihai yanıtı yazması için Google Gemini’ye (bkz. Bölüm 3) iletilir. Ek içeren mesajlarda arama yapılmaz.</li>
+    <li><strong>Ses tanıma</strong> (Ayarlar’dan “Groq Whisper”ı açarsanız): mikrofonla kaydettiğiniz ses (en fazla 60 saniye) yazıya çevrilmek üzere Groq’a iletilir. Kapalıyken ses Gemini’ye gider. Groq çalışmazsa Gemini’ye düşülür.</li>
+    <li><strong>GPT-OSS 120B sohbet modeli</strong> (modeli Ayarlar → Model bölümünden siz seçerseniz): mesajlarınız, önceki konuşma bağlamı (son mesajlar ve kısa özet), özel talimatınız ve mesaja eklediğiniz metin/kod dosyalarının içeriği Gemini yerine Groq’a iletilir. Görsel ve PDF bu modelde çalışmaz ve gönderilmez. Bora AI bu modele kendiliğinden geçmez; Gemini limiti dolduğunda yalnızca sizi bilgilendirir.</li>
+    <li><strong>Hiçbir durumda</strong> Groq’a görsel ve PDF dosyası gönderilmez.</li>
+  </ul>
+  <p><strong>Groq’un politikaları:</strong> Gönderilen verilerin Groq tarafında nasıl işleneceği, saklanacağı ve (ücretsiz katman dahil) hangi amaçlarla kullanılabileceği Groq’un gizlilik politikası ve kullanım koşullarına tabidir; bunu Groq belirler. Güncel bilgi için Groq’un resmî sitesindeki (groq.com) politikalara bakın. Groq’un ücretsiz katmanında dakikalık ve günlük limitler olabilir; limit dolarsa Bora AI aramasız ya da Gemini ile devam eder. Kişisel, gizli veya hassas bilgileri yazmamanızı öneririz.</p>
+  <h2>5. Cihazdaki saklama ve güvenlik</h2>
+<ul>
+<li>Sohbet geçmişi ve API anahtarlarınız (Gemini ve varsa Groq) cihazınızın uygulama depolamasında AES-256-GCM ile şifrelenerek saklanır.</li>
+<li>Uygulama Kilidi (PIN) belirlerseniz şifreleme anahtarı PIN’inizden (PBKDF2) türetilir. PIN’i unutursanız şifreli veriler geri getirilemez.</li>
+<li>PIN belirlemezseniz cihaza özgü, dışarı çıkarılamayan bir anahtar kullanılır. Bu, veri dosyalarının kopyalanmasına karşı koruma sağlar ancak PIN kadar güçlü değildir.</li>
+<li>Uygulama, yalnızca Google Gemini API’ye, (isteğe bağlı arama için) Groq API’ye ve hava durumu için Open-Meteo’ya bağlanacak şekilde kısıtlanmıştır. Yanlış PIN denemeleri yavaşlatılır.</li>
+<li>Hiçbir önlem mutlak güvenlik sağlamaz; cihazınızı ekran kilidiyle korumanızı öneririz.</li>
+</ul>
+
+<h2>6. Saklama süresi ve silme</h2>
+<p>Veriler siz silene kadar cihazınızda kalır. Tek bir sohbeti “Sohbetler” ekranından silebilir, tüm verilerinizi (sohbetler, API anahtarları, PIN ve ayarlar) <strong>Ayarlar → Tüm Verilerimi Sil</strong> ile kalıcı olarak kaldırabilirsiniz. Uygulamayı kaldırmak da cihazdaki yerel verileri siler. Sohbet yedeği aldıysanız, yedek dosyası <strong>şifrelenmemiş</strong> olabilir ve sakladığınız yerden silmeniz gerekir. API anahtarları (Gemini ve Groq) yedeğe dahil edilmez. Yalnızca Groq arama anahtarını silmek için Ayarlar → “Arama anahtarını sil” düğmesini kullanabilirsiniz.</p>
+<p>Google’a ve (kullandıysanız) Groq’a gönderilen verilerin silinmesi için bu şirketlerin kendi araçlarını ve politikalarını kullanmanız gerekir; BoraCoreStudios bu verilere erişemez.</p>
+
+<h2>7. İzinler</h2>
+<ul>
+<li><strong>İnternet:</strong> Google Gemini API ile, (isteğe bağlı arama açıksa) Groq API ile ve hava durumu için Open-Meteo ile iletişim için.</li>
+<li><strong>Mikrofon (isteğe bağlı):</strong> Yalnızca sesli mesaj düğmesine bastığınızda, en fazla 60 saniyelik kayıtlar için.</li>
+<li><strong>Dosya/galeri erişimi:</strong> Yalnızca sizin seçtiğiniz görsel, PDF ve metin dosyaları için.</li>
+</ul>
+
+<h2>8. Yapay zeka içeriği</h2>
+<p>Yanıtlar yapay zeka tarafından üretilir; hatalı, eksik veya uygunsuz olabilir ve profesyonel (tıbbi, hukuki, mali) tavsiye yerine geçmez. Bora AI, Gemini’nin yerleşik güvenlik filtrelerini kullanır. Uygunsuz bir yanıtı, yanıtın altındaki “⚑ Bildir” düğmesiyle bildirebilirsiniz; bildirim metni panoya kopyalanır ve yukarıdaki iletişim adresine gönderebilirsiniz.</p>
+
+<h2>9. Çocukların gizliliği</h2>
+<p>Bora AI 18 yaşın altındaki kişilere yönelik değildir ve bilerek 18 yaş altı kullanıcıların verisini işlemez.</p>
+
+<h2>10. Haklarınız</h2>
+<p>BoraCoreStudios kişisel verilerinizi toplamadığı ve sunucularında saklamadığı için erişim, düzeltme ve silme talepleriniz için en etkili yol, verilerinizi cihazınızdan silmektir. KVKK (Türkiye) ve GDPR (AB) kapsamındaki haklarınızı Google’a ve Groq’a karşı bu şirketlerin sunduğu kanallarla kullanabilirsiniz. Sorularınız için bize yazabilirsiniz.</p>
+
+<h2>11. Değişiklikler</h2>
+<p>Bu politika güncellenebilir. 18 Ekim 2026 güncellemesiyle isteğe bağlı Groq özellikleri (internette arama, Groq ses tanıma, GPT-OSS 120B sohbet modeli) eklenmiştir. Önemli değişikliklerde uygulama içindeki kullanım sözleşmesi ekranı yeniden gösterilir. Güncel sürüm her zaman uygulamada (Ayarlar → Gizlilik Politikası) bulunur.</p>
+
+<h2>12. Kullanım Koşulları</h2>
+<ul>
+<li><strong>Hizmetin niteliği:</strong> Bora AI, BoraCoreStudios tarafından geliştirilen ve hâlâ aktif geliştirme aşamasında olan bir yapay zekâ sohbet uygulamasıdır. Yanıtlar yanlış, eksik, güncel olmayan veya yanıltıcı olabilir; hiçbir yanıt tıbbi, hukuki, finansal veya benzeri profesyonel tavsiye yerine geçmez.</li>
+<li><strong>Kullanıcı sorumluluğu:</strong> Sohbetlere şifre, kimlik/pasaport, banka veya kart bilgisi, adres, sağlık kaydı gibi özel verileri yazmaktan kaçının. API anahtarınızı ve varsa Uygulama Kilidi PIN’inizi gizli tutmak sizin sorumluluğunuzdadır; bunların paylaşılmasından doğacak sonuçlardan BoraCoreStudios sorumlu tutulamaz.</li>
+<li><strong>Yaş sınırı:</strong> Bora AI 18 yaş ve üzeri kullanıcılar içindir.</li>
+<li><strong>Fikri mülkiyet:</strong> Bora AI’ın kaynak kodu, tasarımı ve marka unsurları BoraCoreStudios’a aittir; izinsiz kopyalanması, tersine mühendisliği, çoğaltılması veya dağıtılması yasaktır.</li>
+<li><strong>Sorumluluk sınırlaması:</strong> Uygulama “olduğu gibi” sunulur. Kesintisiz veya hatasız çalışacağı garanti edilmez; kullanımdan doğabilecek doğrudan veya dolaylı zararlardan BoraCoreStudios sorumlu tutulamaz.</li>
+<li><strong>Kabul:</strong> Uygulamadaki “Kabul Et” düğmesine basarak bu Gizlilik Politikası’nı ve Kullanım Koşulları’nı okuduğunuzu ve kabul ettiğinizi beyan edersiniz. “Reddet” derseniz uygulama kapanır.</li>
+</ul>
+
+<h2>13. İletişim</h2>
+<p>BoraCoreStudios — <strong>Boracan912@gmail.com</strong></p>
+</body>
+</html>
